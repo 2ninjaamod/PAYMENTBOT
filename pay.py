@@ -25,7 +25,7 @@ client = TelegramClient('session_name', API_ID, API_HASH)
 channel_link = "https://t.me/+lgb92RXeI2E4ZjM1"
 price_list_link = "https://t.me/c/2147999578/8855"  # Replace with your actual price list link
 qr_code_path = 'payment.jpg'
-gif_path = '0.gif'
+gif_path = 'HELLO.gif'
 cooldown_period = 600  # 10 minutes
 last_qr_request = {}
 
@@ -94,12 +94,6 @@ async def handler(event):
 
     except Exception as e:
         logger.error(f"Error handling message: {e}")
-
-# Notify users when they join the channel
-@client.on(events.ChatAction)
-async def user_joined(event):
-    if event.user_joined or event.user_added:
-        await event.reply("**THANK YOU FOR JOINING OUR CHANNEL!**")
 
 # Start the client
 client.start()
